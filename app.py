@@ -14,13 +14,13 @@ def home():
 def lights():
 
 	action = request.form['action']
-	if action == 1:		
-		GPIO.output(4,True) ## Turn on GPIO pin 4
+	if action == "1":		
+		GPIO.output(7,True) ## Turn on GPIO pin 7
 		return "Action is 1"
 	else:
-		GPIO.output(4,False) ## Turn on GPIO pin 4
+		GPIO.output(7,False) ## Turn on GPIO pin 7
 		return "Action is 0"
 	
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")
